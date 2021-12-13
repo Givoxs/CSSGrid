@@ -1,21 +1,5 @@
 /*Maak hier jouw CSS!*/
 
-
-.container {
-        display: grid;
-        grid-auto-columns: 1fr;
-        grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
-        gap: 16px;
-                grid-template-areas:
-                "blocka"
-                "blockb"
-                "blockc"
-                "blockd"
-                "blocke"
-                "."
-                "blockf";
-}
-
 /*desktopgrid*/
 
 @media screen and (min-width:576px) {
@@ -30,12 +14,9 @@
             "blockf blockf blockf"
     }
 }
-
     #block-a {
         grid-area: blocka;
-
     }
-
 #block-b {
     grid-area: blockb;
     justify-content: start;
@@ -61,6 +42,19 @@
     align-items: center;
 }
 
-
-
+/*mobile*/
+.container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    gap: 16px;
+    grid-template-areas:
+                "blocka"
+                "blockb"
+                "blockc"
+                "blockd"
+                "blocke"
+                "."
+                "blockf";
+}
 
