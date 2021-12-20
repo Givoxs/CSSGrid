@@ -1,1 +1,60 @@
 /*Maak hier jouw CSS!*/
+
+/*desktopgrid*/
+
+@media screen and (min-width:576px) {
+    .container {
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-rows: 50px 174px 100px auto 50px;
+         grid-template-areas:
+            "blocka blockc blockc"
+            "blockb blockc blockc"
+            "blockb blocke blockd"
+            "blockb blocke ."
+            "blockf blockf blockf"
+    }
+}
+    #block-a {
+        grid-area: blocka;
+    }
+#block-b {
+    grid-area: blockb;
+    justify-content: start;
+    align-items: start;
+}
+#block-c {
+    grid-area: blockc;
+}
+#block-d {
+    grid-area: blockd;
+}
+#block-e {
+    grid-area: blocke;
+}
+#block-f {
+    grid-area: blockf;
+}
+.grid-item{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/*mobile*/
+.container {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    gap: 16px;
+    grid-template-areas:
+                "blocka"
+                "blockb"
+                "blockc"
+                "blockd"
+                "blocke"
+                "."
+                "blockf";
+}
+
